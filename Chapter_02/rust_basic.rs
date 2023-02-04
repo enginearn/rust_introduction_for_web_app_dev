@@ -133,7 +133,11 @@ fn main() {
     }
 
     // result
-    let ii: Result<i32, E> = Ok(1);
+    let ii: Result<i32, &str> = Ok(1);
+    match ii {
+        Ok(ii) => println!({}, ii),
+        _ => println!("other"),
+    }
     // assert_eq
     assert_eq!(1, 1);
 
